@@ -6,179 +6,108 @@
 
     <title>Tesseract | Título da Apresentação</title>
 
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="css/reveal.min.css">
-    <link rel="stylesheet" href="css/theme/black.css">
-    <link rel="stylesheet" href="css/tesseract.min.css">
+<meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+@font-face {
+  font-family: 'Jaapokki Regular';
+  src: url('./assets/fonts/jaapokki/regular/jaapokki-regular.eot');
+  src: url('./assets/fonts/jaapokki/regular/jaapokki-regular.eot?#iefix') format('embedded-opentype'),
+    url('./assets/fonts/jaapokki/regular/jaapokki-regular.woff') format('woff'),
+    url('./assets/fonts/jaapokki/regular/jaapokki-regular.ttf') format('truetype'),
+    url('./assets/fonts/jaapokki/regular/jaapokki-regular.svg#JAAPOKKI_REGULAR') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-    <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+@font-face {
+  font-family: 'Jaapokki Enhance';
+  src: url('./assets/fonts/jaapokki/enhance/jaapokki-enhance.eot');
+  src: url('./assets/fonts/jaapokki/enhance/jaapokki-enhance.eot?#iefix') format('embedded-opentype'),
+    url('./assets/fonts/jaapokki/enhance/jaapokki-enhance.woff') format('woff'),
+    url('./assets/fonts/jaapokki/enhance/jaapokki-enhance.ttf') format('truetype'),
+    url('./assets/fonts/jaapokki/enhance/jaapokki-enhance.svg#JAAPOKKI_ENHANCE') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-    <!-- Favicon e relacionados -->
-    <link rel="apple-touch-icon" type="image/png" sizes="57x57" href="../assets/favicon/apple-touch-icon-57x57">
-    <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../assets/favicon/apple-touch-icon-60x60">
-    <link rel="apple-touch-icon" type="image/png" sizes="72x72" href="../assets/favicon/apple-touch-icon-72x72">
-    <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../assets/favicon/apple-touch-icon-76x76">
-    <link rel="apple-touch-icon" type="image/png" sizes="114x114" href="../assets/favicon/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../assets/favicon/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="144x144" href="../assets/favicon/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="../assets/favicon/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../assets/favicon/apple-touch-icon-180x180.png">
-    <link rel="apple-touch-icon" type="image/png" href="../assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon/android-chrome-512x512.png">
-    <link rel="manifest" href="../assets/favicon/manifest.json">
-    <link rel="mask-icon" href="../assets/favicon/safari-pinned-tab.svg" color="#878787">
-    <meta name="msapplication-TileColor" content="#FFFFFF">
-    <meta name="msapplication-TileImage" content="../assets/favicon/mstile-144x144.png">
-    <meta name="msapplication-TileImage" content="../assets/favicon/mstile-150x150.png">
-    <meta name="theme-color" content="#000000">
+@font-face {
+  font-family: 'Jaapokki Subtract';
+  src: url('./assets/fonts/jaapokki/subtract/jaapokki-subtract.eot');
+  src: url('./assets/fonts/jaapokki/subtract/jaapokki-subtract.eot?#iefix') format('embedded-opentype'),
+    url('./assets/fonts/jaapokki/subtract/jaapokki-subtract.woff') format('woff'),
+    url('./assets/fonts/jaapokki/subtract/jaapokki-subtract.ttf') format('truetype'),
+    url('./assets/fonts/jaapokki/subtract/jaapokki-subtract.svg#JAAPOKKI_SUBTRACT') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
+      body {
+        font-family: 'Source Sans Pro';
+        color: white;
+      }
+      h1, h2, h3 {
+        font-family: 'Jaapokki Enhance';
+        font-weight: normal;
+      }
+      p, span {
+        font-family: 'EdmondSans Medium';
+      }
+      .remark-container { background-color: #222; }
+      .remark-slide-scaler { box-shadow: none; }
+      .remark-slide-content { background-color: #222; }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
   </head>
-
   <body>
-    <div class="reveal">
-      <div class="slides">
+    <textarea id="source">
 
-        <!-- Logo Tesseract -->
-        <section>
-          <img class="logo-tesseract"
-            data-src="../assets/images/png/logo-tesseract-completo-branco.png"
-            width="391"
-            height="220" />
+class: center, middle
 
-          <h5>Título da Apresentação</h5>
-          <h6>Subtítulo da Apresentação</h6>
-        </section>
+# ![Logo Tesseract](http://res.cloudinary.com/tesseract/image/upload/v1507448078/logo-tesseract-completo-branco.png)
+Fechamento de um ciclo e início do próximo
 
-        <!-- Capítulo 0: Introdução -->
-        <section>
-          <h1>Cabeçalho h1</h1>
-          <h2>Cabeçalho h2</h2>
-          <h3>Cabeçalho h3</h3>
-          <h4>Cabeçalho h4</h4>
-          <h5>Cabeçalho h5</h5>
-          <h6>Cabeçalho h6</h6>
-        </section>
+---
 
-      </div>
-    </div>
+# Objetivos da Reunião
 
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.js"></script>
+ - Celebrar 🎉
+ - Fazer uma retrospectiva do quadrimestre 🗓️
+ - Falar sobre perspectivas futuras
 
+---
+
+# Retrospectiva
+ - Geral
+    - Faturamento
+    - Projetos fechados
+    - Horas no clockify
+ - Administrativo, Jurídico e Sociedade
+    - Resultados da última redistribuição
+ - Comercial
+ - Marketing
+ - Gestão do conhecimento
+ - Dev Interno
+ - Financeiro
+
+---
+
+# Preview próximo ciclo
+ - O que esperar?
+
+---
+
+class: center, middle
+# CATCH A FIRE!
+![catcha](http://res.cloudinary.com/tesseract/image/upload/q_10/v1507449973/catch-a-fire_rumxwj.gif "Catchafire")
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
     <script>
-      // More info https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
-        // Display controls in the bottom right corner
-          controls: false,
-
-          // Display a presentation progress bar
-          progress: true,
-
-          // Display the page number of the current slide
-          slideNumber: false,
-
-          // Push each slide change to the browser history
-          history: false,
-
-          // Enable keyboard shortcuts for navigation
-          keyboard: true,
-
-          // Enable the slide overview mode
-          overview: true,
-
-          // Vertical centering of slides
-          center: true,
-
-          // Enables touch navigation on devices with touch input
-          touch: true,
-
-          // Loop the presentation
-          loop: false,
-
-          // Change the presentation direction to be RTL
-          rtl: false,
-
-          // Randomizes the order of slides each time the presentation loads
-          shuffle: false,
-
-          // Turns fragments on and off globally
-          fragments: true,
-
-          // Flags if the presentation is running in an embedded mode,
-          // i.e. contained within a limited portion of the screen
-          embedded: false,
-
-          // Flags if we should show a help overlay when the questionmark
-          // key is pressed
-          help: true,
-
-          // Flags if speaker notes should be visible to all viewers
-          showNotes: false,
-
-          // Number of milliseconds between automatically proceeding to the
-          // next slide, disabled when set to 0, this value can be overwritten
-          // by using a data-autoslide attribute on your slides
-          autoSlide: 0,
-
-          // Stop auto-sliding after user input
-          autoSlideStoppable: true,
-
-          // Use this method for navigation when auto-sliding
-          autoSlideMethod: Reveal.navigateNext,
-
-          // Enable slide navigation via mouse wheel
-          mouseWheel: true,
-
-          // Hides the address bar on mobile devices
-          hideAddressBar: true,
-
-          // Opens links in an iframe preview overlay
-          previewLinks: false,
-
-          // Transition style
-          transition: 'convex', // none/fade/slide/convex/concave/zoom
-
-          // Transition speed
-          transitionSpeed: 'default', // default/fast/slow
-
-          // Transition style for full page slide backgrounds
-          backgroundTransition: 'concave', // none/fade/slide/convex/concave/zoom
-
-          // Number of slides away from the current that are visible
-          viewDistance: 3,
-
-          // Parallax background image
-          parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
-
-          // Parallax background size
-          parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
-
-          // Number of pixels to move the parallax background per slide
-          // - Calculated automatically unless specified
-          // - Set to 0 to disable movement along an axis
-          parallaxBackgroundHorizontal: null,
-          parallaxBackgroundVertical: null,
-
-        // More info https://github.com/hakimel/reveal.js#dependencies
-        dependencies: [
-          { src: 'plugin/markdown/marked.js' },
-          { src: 'plugin/markdown/markdown.js' },
-          { src: 'plugin/notes/notes.js', async: true },
-          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-        ]
-      });
+      var slideshow = remark.create();
     </script>
   </body>
 </html>
